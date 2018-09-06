@@ -1,3 +1,7 @@
+//Using namespaces
+/// <reference path="myMath.ts" />
+import sumNumbers = MyMath.sumNumbers;
+
 //tuple
 let  addr: [string, number] = ['Rua xxxx', 33];
 
@@ -105,4 +109,5 @@ let canNotBeNull = 12;
 
 
 
-
+console.log(sumNumbers(10, 33));
+console.log(MyMath.multiplyNumbers(2, 10));

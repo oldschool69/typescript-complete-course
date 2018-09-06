@@ -1,3 +1,6 @@
+//Using namespaces
+/// <reference path="myMath.ts" />
+var sumNumbers = MyMath.sumNumbers;
 //tuple
 var addr = ['Rua xxxx', 33];
 console.log(addr);
@@ -79,3 +82,5 @@ canBeNull = 45;
 canBeNull = null;
 var canNotBeNull = 12;
 // canNotBeNull = null; erro de compilacao
+console.log(sumNumbers(10, 33));
+console.log(MyMath.multiplyNumbers(2, 10));

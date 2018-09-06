@@ -64,3 +64,38 @@ var plant = new Plant();
 console.log(plant.species);
 plant.species = "Green leaf";
 console.log(plant.species);
+// Classe abstrata
+var Animal = /** @class */ (function () {
+    function Animal() {
+        this.name = "Animal";
+        this.qtdLegs = 4;
+    }
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Dog.prototype.showDescription = function () {
+        console.log("This is a Dog, with " + this.qtdLegs + " legs");
+    };
+    return Dog;
+}(Animal));
+var dog = new Dog();
+dog.showDescription();
+//Singleton
+var Singleton = /** @class */ (function () {
+    function Singleton() {
+    }
+    ;
+    Singleton.getInstance = function () {
+        if (!this.instance) {
+            this.instance = new Singleton();
+        }
+        return this.instance;
+    };
+    return Singleton;
+}());
+var singleton = Singleton.getInstance();
+console.log(singleton);
